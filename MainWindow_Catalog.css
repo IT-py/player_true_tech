@@ -1,0 +1,156 @@
+/* Стили для аватарки */
+		.avatar {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-color: #ccc;
+			border-radius: 50%;
+			margin-right: 20px;
+			object-fit: cover;
+			vertical-align: middle;
+			float: right;
+		}
+		html, body {
+		  margin: 0;
+		  padding: 0;
+		  height: 100%;
+		}
+
+			/* Стили для кнопок */
+		.button-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 10px;
+			margin: 10px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		/* Стили для форм */
+		.form-container {
+			display: inline-block;
+			width: 200px;
+			margin: 20px;
+			text-align: center;
+			border: 1px solid #ccc;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.form-container img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			margin-bottom: 10px;
+			border-radius: 5px;
+		}
+
+		/* Стили для хедера */
+		.header {
+			display: flex;
+			align-items: center;
+			background-color: #121212;
+			color: #fff;
+			padding: 10px;
+			justify-content: space-between;
+		}
+
+		/* Стили для названия "МТС" */
+		.company-name {
+			display: inline-block;
+			padding: 10px;
+			background-color: transparent;
+			color: #fff;
+			font-size: 60px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+			text-transform: uppercase;
+			cursor: pointer;
+			border: none;
+			margin-right: 20px;
+		}
+
+		.sort-by {
+		  position: absolute;
+		  top: 20px;
+		  right: 20px;
+		}
+
+		.sort-by label {
+		  margin-right: 10px;
+		  font-weight: bold;
+		}
+
+		.sort-by select {
+		  padding: 5px;
+		  border-radius: 5px;
+		  border: 1px solid #ccc;
+		  cursor: pointer;
+		}
+
+		/* Изменения для кнопки "Сортировать" */
+		.sort-by-button {
+		  background-color: #FFFFFF;
+		  color: #000;
+		  font-family: 'Montserrat', sans-serif;
+		  font-size: 20px;
+		  font-weight: bold;
+		  border: 2px solid #CEFF45; /* добавляем обводку */
+		  border-radius: 5px;
+		  padding: 10px;
+		  cursor: pointer;
+		}
+
+		.sort-by-button:hover {
+		  background-color: #CEFF45;
+		  color: #000;
+		}
+
+
+
+
+		/* Стили для основной части сайта */
+		.main {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: center;
+			padding: 20px;
+			background-color: #1A1A1A;
+			min-height: calc(100vh - 70px);
+			position: relative;
+		}
+
+		/* Стили для кнопки "Смотреть" */
+		.watch-button {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.form-container {
+		background-color: #202020;
+		}
+
+		.form-container {
+		background-color: #202020;
+		color: #FFFFFF;
+		font-size: 25px;
+		font-family: 'Montserrat', sans-serif;
+		}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Player</title>
+    <style>
+
+      body {
+      background-color: #1A1A1A;
+      color: #fff;
+      }
+
+        /* Стили для аватарки */
+		.avatar {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-color: #ccc;
+			border-radius: 50%;
+			margin-right: 20px;
+			object-fit: cover;
+			vertical-align: middle;
+			float: right;
+		}
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+          /* Стили для хедера */
+      .header {
+          display: flex;
+          align-items: center;
+          background-color: #121212;
+          color: #fff;
+          padding: 10px;
+          justify-content: space-between;
+
+      }
+
+      /* Стили для названия "МТС" */
+      .company-name {
+          display: inline-block;
+          padding: 10px;
+          background-color: transparent;
+          color: #fff;
+          font-size: 60px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          border: none;
+          margin-right: 20px;
+      }
+
+      /* Стили для элементов управления */
+      .control {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      #color-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+        padding: 2rem;
+        margin: 2rem auto;
+        border: 2px solid #007bff;
+        border-radius: 0.5rem;
+        width: 50%;
+      }
+
+
+      .control label {
+        margin-right: 1rem;
+      }
+
+      .control input[type="range"] {
+        width: 10rem;
+        height: 1rem;
+        margin-right: 1rem;
+        -webkit-appearance: none;
+        background-color: #e9ecef;
+        border-radius: 0.5rem;
+        outline: none;
+        color: #fff;
+      }
+
+      .control input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 1rem;
+        height: 1rem;
+        background-color: #007bff;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      .control button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .control button:hover {
+        background-color: #0062cc;
+      }
+
+      /* Стили для видео */
+      video {
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+
+      /* Стили для блока функционала */
+      .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+
+      #intro-btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .controls {
+      margin-top: 450px;
+      }
+
+
+      video {
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 705px;
+        height: 390px;
+        float: right;
+        width: calc(40% - 90px);
+      }
+
+      .image-container {
+        width: 295px;
+        height: 441px;
+        position: absolute;
+        left: 90px;
+        top: 0;
+        z-index: 1;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #color-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #202020; /* update background color */
+      padding: 2rem;
+      margin: 2rem auto;
+      border: 2px solid #007bff;
+      border-radius: 0.5rem;
+      width: 50%;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <header class="header">
+          <div class="header__left">
+              <button class="company-name" onclick="window.location.href='MainWindow.html'">МТС</button>
+          </div>
+          <div class="header__right">
+              <div class="avatar"></div>
+          </div>
+    </header>
+
+    <video id="my-video" src="video.mp4"></video>
+
+    <div class="controls">
+
+      <div id="dialog" style="display:none;">
+        <p>Вы хотите продолжить просмотр или начать заново?</p>
+        <button id="resume-btn">Продолжить</button>
+        <button id="restart-btn">Начать заново</button>
+      </div>
+
+      <div class="control">
+        <label for="reminders-checkbox">Напоминания:</label>
+        <input type="checkbox" id="reminders-checkbox">
+      </div>
+
+    <div class="control">
+      <button id="switch-video-btn">Сменить видео</button>
+
+
+    </div>
+      <div class="control">
+        <button id="play-pause-btn">Play</button>
+      </div>
+      <div class="control">
+        <label for="speed-slider">Speed:</label>
+        <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="1">
+      </div>
+      <div class="control">
+        <label for="brightness-slider">Brightness:</label>
+        <input type="range" id="brightness-slider" min="0" max="200" step="1" value="100">
+      </div>
+      <div class="control">
+        <label for="contrast-slider">Contrast:</label>
+        <input type="range" id="contrast-slider" min="0" max="200" step="1" value="100">
+      </div>
+      <div class="control">
+        <button id="rewind-btn">-15s</button>
+        <button id="forward-btn">+15s</button>
+      </div>
+    </div>
+
+    <div id="intro-btns"></div>
+
+    <div id="color-block">
+      <form>
+        <label for="color1">Цвет для замены:</label>
+        <input type="text" id="color1" name="color1"><br>
+
+        <label for="color2">Новый цвет:</label>
+        <input type="text" id="color2" name="color2"><br>
+
+        <input type="button" value="Заменить цвет" onclick="changeColor()">
+      </form>
+    </div>
+
+    <button onclick="saveParamsToJson()">Скачать параметры</button>
+
+    <script src="PlayerWindow.js"></script>
+
+  </body>
+</html>
