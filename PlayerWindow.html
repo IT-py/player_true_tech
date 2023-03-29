@@ -210,8 +210,6 @@
 
     <div class="control">
       <button id="switch-video-btn">Сменить видео</button>
-
-
     </div>
       <div class="control">
         <button id="play-pause-btn">Play</button>
@@ -248,8 +246,12 @@
       </form>
     </div>
 
-    <button onclick="saveParamsToJson()">Скачать параметры</button>
-
+    <div>
+        <button id="start-btn">Запустить распознавание</button>
+        <button id="stop-btn" disabled>Остановить распознавание</button>
+        <div id="status-div"></div>
+        <div id="error-div"></div>
+    </div>
     <script src="PlayerWindow.js"></script>
 
   </body>
